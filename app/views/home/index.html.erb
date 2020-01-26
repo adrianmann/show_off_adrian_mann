@@ -1,0 +1,8 @@
+<h1>Widgets</h1>
+<% if @widgets.any? %>
+  <% @widgets.each do |widget| %>
+    <p><%= widget["name"] %> <%= widget["user"]["name"] %></p>
+  <% end %>
+<% else %>
+	<p>There were no widgets found.</p>
+<% end %>
