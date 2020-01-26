@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get "users/index"
+  get "users/new"
+  post "users/create"
+  get "users/login_form"
+  post "users/login"
 end

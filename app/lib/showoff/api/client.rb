@@ -12,6 +12,13 @@ module Showoff
         parse_widgets(rest_client_request.body)
       end
 
+      def submit(url, options={})
+        puts "options: #{options}"
+        rest_client_request = post(root_url + url, options)
+        puts "rest_client_request: #{rest_client_request}"
+        rest_client_request
+      end
+
       private
 
       def parse_widgets(body)
@@ -28,7 +35,7 @@ module Showoff
       end
 
       def root_url
-        "#{ENV["SHOW_OFF_HOST"]}/api/v1"
+        "#{ENV["SHOW_OFF_HOST"]}api/v1"
       end
 
       def client_info

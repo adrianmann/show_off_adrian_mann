@@ -1,0 +1,17 @@
+<h1>Login</h1>
+
+<%= form_tag({:controller=>"users", :action=>"create"}, method: :post) do %>
+  <%= label_tag "First Name" %>
+  <%= text_field_tag :first_name %>
+
+  <%= label_tag "Last Name" %>
+  <%= text_field_tag :last_name %>
+
+  <%= label_tag "Pasword" %>
+  <%= text_field_tag :password %>
+
+  <%= label_tag "Email" %>
+  <%= text_field_tag :email %>
+
+  <%= submit_tag 'Create Account' %>
+<% end %>
